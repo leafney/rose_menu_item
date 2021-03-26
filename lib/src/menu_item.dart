@@ -42,9 +42,10 @@ class SetMenuItem extends StatelessWidget {
   final CrossAxisAlignment iconCrossAlign; // 左侧Icon副轴排列方式
 
   /// 是否显示右侧箭头（默认true显示
-  final bool nextIcon; // 右侧箭头
+  final bool showNextIcon; // 右侧箭头
   /// 箭头颜色
-  final Color? nextIconColor; // 右侧箭头颜色
+  final Color? showNextIconColor; // 右侧箭头颜色
+  final Widget? nextIcon;
 
   /// 右侧文本控件
   final Widget? rightText; // 右侧文本控件
@@ -59,8 +60,8 @@ class SetMenuItem extends StatelessWidget {
 
   const SetMenuItem({
     Key? key,
-    required this.itemTitle,
     required this.onTap,
+    required this.itemTitle,
     this.itemHeight = 53,
     this.itemInfo,
     this.itemCrossAlign = CrossAxisAlignment.center,
@@ -71,11 +72,12 @@ class SetMenuItem extends StatelessWidget {
     this.iconRightPadding = 0,
     this.iconBottomLine = false,
     this.iconCrossAlign = CrossAxisAlignment.center,
-    this.nextIcon = true,
-    this.nextIconColor,
+    this.showNextIcon = true,
+    this.showNextIconColor,
     this.rightText,
     this.startPadding = 0,
     this.endPadding = 0,
+    this.nextIcon,
   }) : super(key: key);
 
   @override
@@ -143,9 +145,10 @@ class SetMenuItem extends StatelessWidget {
             // item right text
             this.rightText ?? SizedBox(),
             // whether to show the right next arrow
-            this.nextIcon
-                ? Icon(Icons.navigate_next, color: this.nextIconColor)
-                : SizedBox(),
+            this.nextIcon ??
+                (this.showNextIcon
+                    ? Icon(Icons.navigate_next, color: this.showNextIconColor)
+                    : SizedBox()),
             // item right padding
             SizedBox(width: this.endPadding),
           ],
