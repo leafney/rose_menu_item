@@ -2,7 +2,7 @@
  * @Author     : leafney
  * @Github     : https://github.com/leafney
  * @Date       : 2021-03-26 09:45:22
- * @Description: set menu item
+ * @Description: set_menu_item
  */
 
 import 'package:flutter/material.dart';
@@ -26,14 +26,14 @@ class SetMenuItem extends StatelessWidget {
   /// 虚线颜色值
   final Color bottomLineColor; // 底部虚线颜色
 
-  /// icon底部虚线
-  final bool iconBottomLine;
-
   /// 虚线宽度
   final double bottomLineWidth;
 
   /// 左侧Icon
   final Widget? icon; // 左侧Icon
+
+  /// icon底部虚线
+  final bool iconBottomLine;
 
   /// 左侧Icon与文本之间间距
   final double iconRightPadding;
@@ -45,6 +45,7 @@ class SetMenuItem extends StatelessWidget {
   final bool showNextIcon; // 右侧箭头
   /// 箭头颜色
   final Color? showNextIconColor; // 右侧箭头颜色
+  /// custom next icon
   final Widget? nextIcon;
 
   /// 右侧文本控件
@@ -66,7 +67,7 @@ class SetMenuItem extends StatelessWidget {
     this.itemInfo,
     this.itemCrossAlign = CrossAxisAlignment.center,
     this.bottomLine = true,
-    this.bottomLineColor = const Color(0xFF000000),
+    this.bottomLineColor = Colors.black,
     this.bottomLineWidth = 1,
     this.icon,
     this.iconRightPadding = 0,
@@ -107,7 +108,7 @@ class SetMenuItem extends StatelessWidget {
         border: this.iconBottomLine
             ? Border(
                 bottom: BorderSide(
-                width: 1, // TODO set width
+                width: this.bottomLineWidth,
                 color: this.bottomLineColor,
               ))
             : null,
@@ -130,7 +131,7 @@ class SetMenuItem extends StatelessWidget {
           border: this.bottomLine
               ? Border(
                   bottom: BorderSide(
-                  width: 1, // TODO
+                  width: this.bottomLineWidth,
                   color: this.bottomLineColor,
                 ))
               : null,
