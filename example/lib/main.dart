@@ -36,18 +36,27 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => Test1Page()));
+                          builder: (BuildContext context) => TestOnePage()));
                 },
-                child: Text('Test 1'),
+                child: Text('Test One'),
               ),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (BuildContext context) => Test2Page()));
+                          builder: (BuildContext context) => TestTwoPage()));
                 },
-                child: Text('Test 2'),
+                child: Text('Test Two'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) => TestThreePage()));
+                },
+                child: Text('Test Three'),
               ),
             ],
           ),
@@ -57,12 +66,39 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class Test1Page extends StatelessWidget {
+/// TestOnePage
+class TestOnePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Test 1'),
+        title: Text('Test One'),
+      ),
+      body: Container(),
+    );
+  }
+}
+
+/// TestTwoPage
+class TestTwoPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Test Two'),
+      ),
+      body: Container(),
+    );
+  }
+}
+
+/// TestThreePage
+class TestThreePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Text Three'),
       ),
       body: Container(
         color: Color(0xff3E3D4C),
@@ -266,18 +302,6 @@ class Test1Page extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class Test2Page extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Test 2'),
-      ),
-      body: Container(),
     );
   }
 }

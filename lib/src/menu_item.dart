@@ -74,10 +74,10 @@ class SetMenuItem extends StatelessWidget {
     this.iconCrossAlign = CrossAxisAlignment.center,
     this.showNextIcon = true,
     this.showNextIconColor,
+    this.nextIcon,
     this.rightText,
     this.startPadding = 0,
     this.endPadding = 0,
-    this.nextIcon,
   }) : super(key: key);
 
   @override
