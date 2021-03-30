@@ -88,7 +88,7 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.8.0"
-  set_menu_item:
+  rose_menu_item:
     dependency: "direct main"
     description:
       path: ".."

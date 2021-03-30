@@ -1,4 +1,4 @@
-# set_menu_item
+# rose_menu_item
 
 A new Flutter package project.
 

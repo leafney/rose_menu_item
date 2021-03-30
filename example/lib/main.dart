@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:set_menu_item/set_menu_item.dart';
+import 'package:rose_menu_item/rose_menu_item.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('set_menu_item'),
+        title: Text('rose_menu_item'),
       ),
       body: Container(
         child: Center(
@@ -110,7 +110,7 @@ class TestThreePage extends StatelessWidget {
               padding: EdgeInsets.symmetric(
                 horizontal: 10,
               ),
-              child: SetMenuItem(
+              child: RoseMenuItem(
                 onTap: () {},
                 itemTitle: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -155,7 +155,7 @@ class TestThreePage extends StatelessWidget {
               child: Column(
                 children: [
                   // 车辆管理
-                  SetMenuItem(
+                  RoseMenuItem(
                     onTap: () {},
                     itemTitle: Text(
                       '车辆管理',
@@ -184,7 +184,7 @@ class TestThreePage extends StatelessWidget {
                   ),
 
                   // 车辆授权
-                  SetMenuItem(
+                  RoseMenuItem(
                     onTap: () {},
                     itemTitle: Text(
                       '车辆授权',
@@ -209,7 +209,7 @@ class TestThreePage extends StatelessWidget {
                   ),
 
                   // 手势密码
-                  SetMenuItem(
+                  RoseMenuItem(
                     onTap: () {},
                     itemTitle: Text(
                       '手势密码',
@@ -247,7 +247,7 @@ class TestThreePage extends StatelessWidget {
               child: Column(
                 children: [
                   // 客服电话
-                  SetMenuItem(
+                  RoseMenuItem(
                     onTap: () {},
                     itemTitle: Text(
                       '客服电话',
@@ -272,7 +272,7 @@ class TestThreePage extends StatelessWidget {
                   ),
 
                   // 救援电话
-                  SetMenuItem(
+                  RoseMenuItem(
                     onTap: () {},
                     itemTitle: Text(
                       '救援电话',

@@ -2,13 +2,13 @@
  * @Author     : leafney
  * @Github     : https://github.com/leafney
  * @Date       : 2021-03-26 09:45:22
- * @Description: set_menu_item
+ * @Description: rose_menu_item
  */
 
 import 'package:flutter/material.dart';
 
 ///
-class SetMenuItem extends StatelessWidget {
+class RoseMenuItem extends StatelessWidget {
   ///
   final double? itemHeight;
 
@@ -59,7 +59,7 @@ class SetMenuItem extends StatelessWidget {
 
   final VoidCallback onTap;
 
-  const SetMenuItem({
+  const RoseMenuItem({
     Key? key,
     required this.onTap,
     required this.itemTitle,
