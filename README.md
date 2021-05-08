@@ -11,14 +11,14 @@ A new Flutter package project.
 
 ### Test One
 
-![20210326160716](https://gitee.com/leafney/blogimage/raw/master/blog/20210326160716.jpg)
+![20210326160716](snap_shot/20210326160716.jpg)
 
 
 ### Test Two
 
-![20210326100305](https://gitee.com/leafney/blogimage/raw/master/blog/20210326100305.png)
+![20210326100305](snap_shot/20210326100305.png)
 
 
 ### Test Three
 
-![20210301195324](https://gitee.com/leafney/blogimage/raw/master/blog/20210301195324.jpg)
+![20210301195324](snap_shot/20210301195324.jpg)
