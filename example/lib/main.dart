@@ -75,8 +75,85 @@ class TestOnePage extends StatelessWidget {
         title: Text('Test One'),
       ),
       body: Container(
-        child: Column(
-          children: [],
+        // 右侧底线到边界，所以只设置左侧边距
+        // The right bottom line to the border, so only the left margin is set
+        padding: EdgeInsets.only(left: 16),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // 设置
+              RoseMenuItem(
+                onTap: () {},
+                itemTitle: Text(
+                  '设置',
+                  style: TextStyle(fontSize: 15, color: Color(0xFF333333)),
+                ),
+                icon: Icon(Icons.settings, color: Color(0xFF666666)),
+                iconRightPadding: 16,
+                bottomLineColor: Colors.black.withOpacity(0.1),
+                showNextIconColor: Color(0xFFB5B5B5),
+                endPadding: 16,
+              ),
+
+              // 去评分
+              RoseMenuItem(
+                onTap: () {},
+                itemTitle: Text(
+                  '去评分',
+                  style: TextStyle(fontSize: 15, color: Color(0xFF333333)),
+                ),
+                icon: Icon(Icons.stars, color: Color(0xFF666666)),
+                iconRightPadding: 16,
+                bottomLineColor: Colors.black.withOpacity(0.1),
+                showNextIconColor: Color(0xFFB5B5B5),
+                endPadding: 16,
+              ),
+
+              // 意见反馈
+              RoseMenuItem(
+                onTap: () {},
+                itemTitle: Text(
+                  '意见反馈',
+                  style: TextStyle(fontSize: 15, color: Color(0xFF333333)),
+                ),
+                icon: Icon(Icons.help, color: Color(0xFF666666)),
+                iconRightPadding: 16,
+                bottomLineColor: Colors.black.withOpacity(0.1),
+                showNextIconColor: Color(0xFFB5B5B5),
+                endPadding: 16,
+              ),
+
+              // 关于
+              RoseMenuItem(
+                onTap: () {},
+                itemTitle: Text(
+                  '关于',
+                  style: TextStyle(fontSize: 15, color: Color(0xFF333333)),
+                ),
+                icon: Icon(Icons.bookmarks_outlined, color: Color(0xFF666666)),
+                iconRightPadding: 16,
+                bottomLineColor: Colors.black.withOpacity(0.1),
+                showNextIconColor: Color(0xFFB5B5B5),
+                endPadding: 16,
+              ),
+
+              // 推荐给好友
+              RoseMenuItem(
+                onTap: () {},
+                itemTitle: Text(
+                  '推荐给好友',
+                  style: TextStyle(fontSize: 15, color: Color(0xFF333333)),
+                ),
+                icon: Icon(Icons.share, color: Color(0xFF666666)),
+                iconRightPadding: 16,
+                bottomLineColor: Colors.black.withOpacity(0.1),
+                showNextIconColor: Color(0xFFB5B5B5),
+                endPadding: 16,
+                bottomLine: false,
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -180,7 +257,7 @@ class TestThreePage extends StatelessWidget {
         title: Text('Test Three'),
       ),
       body: Container(
-        color: Color(0xff3E3D4C),
+        color: Color(0xFF3E3D4C),
         child: Column(
           children: [
             SizedBox(height: 50),
@@ -209,7 +286,7 @@ class TestThreePage extends StatelessWidget {
                 icon: CircleAvatar(
                   child: Icon(
                     Icons.people,
-                    color: Color(0xff3E3D4C),
+                    color: Color(0xFF3E3D4C),
                     size: 30,
                   ),
                   backgroundColor: Colors.white,
@@ -242,11 +319,8 @@ class TestThreePage extends StatelessWidget {
                     ),
                     itemHeight: 60,
                     icon: CircleAvatar(
-                      backgroundColor: Color(0xffCFB78D),
-                      child: Icon(
-                        Icons.people,
-                        color: Color(0xff3E3D4C),
-                      ),
+                      backgroundColor: Color(0xFFCFB78D),
+                      child: Icon(Icons.people, color: Color(0xFF3E3D4C)),
                       radius: 16,
                     ),
                     startPadding: 12,
@@ -265,17 +339,12 @@ class TestThreePage extends StatelessWidget {
                   // 车辆授权
                   RoseMenuItem(
                     onTap: () {},
-                    itemTitle: Text(
-                      '车辆授权',
-                      style: TextStyle(color: Colors.white, fontSize: 18),
-                    ),
+                    itemTitle: Text('车辆授权',
+                        style: TextStyle(color: Colors.white, fontSize: 18)),
                     itemHeight: 60,
                     icon: CircleAvatar(
-                      backgroundColor: Color(0xffCFB78D),
-                      child: Icon(
-                        Icons.people,
-                        color: Color(0xff3E3D4C),
-                      ),
+                      backgroundColor: Color(0xFFCFB78D),
+                      child: Icon(Icons.people, color: Color(0xFF3E3D4C)),
                       radius: 16,
                     ),
                     startPadding: 12,
@@ -296,11 +365,8 @@ class TestThreePage extends StatelessWidget {
                     ),
                     itemHeight: 60,
                     icon: CircleAvatar(
-                      backgroundColor: Color(0xffCFB78D),
-                      child: Icon(
-                        Icons.people,
-                        color: Color(0xff3E3D4C),
-                      ),
+                      backgroundColor: Color(0xFFCFB78D),
+                      child: Icon(Icons.people, color: Color(0xFF3E3D4C)),
                       radius: 16,
                     ),
                     startPadding: 12,
@@ -310,7 +376,7 @@ class TestThreePage extends StatelessWidget {
                     rightText: Switch(
                       value: true,
                       onChanged: (changed) {},
-                      activeColor: Color(0xffE25C4A),
+                      activeColor: Color(0xFFE25C4A),
                     ),
                   ),
                 ],
@@ -320,9 +386,7 @@ class TestThreePage extends StatelessWidget {
 
             // Part three
             Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 10,
-              ),
+              padding: EdgeInsets.symmetric(horizontal: 10),
               child: Column(
                 children: [
                   // 客服电话
@@ -334,10 +398,10 @@ class TestThreePage extends StatelessWidget {
                     ),
                     itemHeight: 60,
                     icon: CircleAvatar(
-                      backgroundColor: Color(0xffCFB78D),
+                      backgroundColor: Color(0xFFCFB78D),
                       child: Icon(
                         Icons.people,
-                        color: Color(0xff3E3D4C),
+                        color: Color(0xFF3E3D4C),
                       ),
                       radius: 16,
                     ),
@@ -346,7 +410,7 @@ class TestThreePage extends StatelessWidget {
                     showNextIcon: false,
                     rightText: Text(
                       '400-10220-1022',
-                      style: TextStyle(color: Color(0xffCFB78D), fontSize: 17),
+                      style: TextStyle(color: Color(0xFFCFB78D), fontSize: 17),
                     ),
                   ),
 
@@ -359,10 +423,10 @@ class TestThreePage extends StatelessWidget {
                     ),
                     itemHeight: 60,
                     icon: CircleAvatar(
-                      backgroundColor: Color(0xffCFB78D),
+                      backgroundColor: Color(0xFFCFB78D),
                       child: Icon(
                         Icons.people,
-                        color: Color(0xff3E3D4C),
+                        color: Color(0xFF3E3D4C),
                       ),
                       radius: 16,
                     ),
@@ -372,7 +436,7 @@ class TestThreePage extends StatelessWidget {
                     showNextIcon: false,
                     rightText: Text(
                       '3202923920',
-                      style: TextStyle(color: Color(0xffCFB78D), fontSize: 17),
+                      style: TextStyle(color: Color(0xFFCFB78D), fontSize: 17),
                     ),
                   ),
                 ],
